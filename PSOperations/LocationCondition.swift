@@ -73,8 +73,8 @@ public struct LocationCondition: OperationCondition {
                 code: .conditionFailed,
                 userInfo: [
                     OperationConditionKey: type(of: self).name,
-                    type(of: self).locationServicesEnabledKey: enabled,
-                    type(of: self).authorizationStatusKey: Int(actual.rawValue)
+                    String(type(of: self).locationServicesEnabledKey): enabled,
+                    String(type(of: self).authorizationStatusKey): Int(actual.rawValue)
                 ]
             )
         }
